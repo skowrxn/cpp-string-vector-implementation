@@ -1,7 +1,7 @@
 # Laboratoria 10: Kolokwium z roku 2021: PtrCStringVector
 Materiał w tym roku jest podobny co w roku 2021, więc samodzielne zrobienie paczki daje duże szanse na zdanie tegorocznego kolokwium.
 Proszę spróbować zaimplementować to w oparciu o treść z pliku `PtrCStringVector.h`
-(alternatywnie w pliku `Documentation.pdf`).
+(alternatywnie w pliku `Documentation.pdf`)..
 
 **Dobrze jakby Państwo spróbowali to kolokwium zrobić zamodzielnie, nie pytali się zbyt pochopnie innych. Jeśli Państwo sobie poradzą będzie to znak, że materiał na kolokwium w aktualnym roku Państwo w miarę ogarniają.**
 
