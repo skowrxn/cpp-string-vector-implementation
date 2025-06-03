@@ -1,6 +1,6 @@
 Dear Student,
 
-I regret to inform you that you've received only **0** out of 2 points for this assignment.
+I regret to inform you that you've received only **0** out of 2 points for this assignment
 
 There still exist some issues that should be addressed before the deadline: **2025-06-04 10:00:00 CEST (+0200)**. For further details, please refer to the following list:
 
