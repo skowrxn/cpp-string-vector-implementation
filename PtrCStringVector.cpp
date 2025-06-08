@@ -93,7 +93,7 @@ PtrCStringVector PtrCStringVector::operator+(const PtrCStringVector &anotherVect
     }
     PtrCStringVector result;
     result.size_ = new_size;
-    result.capacity_ = capacity_;
+    result.capacity_ = new_capacity;
     result.data_ = new_data;
     return result;
 }
