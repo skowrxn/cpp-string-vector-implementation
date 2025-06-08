@@ -28,7 +28,7 @@ PtrCStringVector::PtrCStringVector(const PtrCStringVector &srcPtrCStringVector):
 PtrCStringVector::~PtrCStringVector()
 {
     for (size_t i = 0; i < size_; i++) {
-        delete data_[i];
+        delete[] data_[i];
     }
     delete[] data_;
 
@@ -69,13 +69,15 @@ PtrCStringVector& PtrCStringVector::operator=(PtrCStringVector&& source)
 
 void PtrCStringVector::push_back(const char *text2Add)
 {
-    if (size_ >= capacity_) {
-        reserve(capacity_*2);
+    if (!text2Add) {
+        throw std::invalid_argument("Nullptr text");
     }
-    data_[size_] = new char[strlen(text2Add)+1];
+    if (size_ >= capacity_) {
+        reserve(capacity_ * 2);
+    }
+    data_[size_] = new char[strlen(text2Add) + 1];
     strcpy(data_[size_], text2Add);
     ++size_;
-
 }
 
 PtrCStringVector PtrCStringVector::operator+(const PtrCStringVector &anotherVector) const
