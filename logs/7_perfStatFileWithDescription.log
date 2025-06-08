@@ -6,155 +6,46 @@ Consolidate compiler generated dependencies of target tests
 [ 87%] Built target tests
 [100%] Running perf stat and explaining results
 
-=================================================================
-==236==ERROR: LeakSanitizer: detected memory leaks
+ Performance counter stats for '/tmp/tmp7u11x9w4/student/build/bin/tests':
 
-Direct leak of 640 byte(s) in 8 object(s) allocated from:
-    #0 0x7f30db31fd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x55f8c7c884c0 in PtrCStringVector::PtrCStringVector() /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13
-    #2 0x55f8c7c8ad7e in PtrCStringVector::operator+(PtrCStringVector const&) const /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:96
-    #3 0x55f8c7c63c4d in PtrCStringVectorTester_antytest4_Test::TestBody() /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:403
-    #4 0x55f8c7dc9007 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #5 0x55f8c7d9c5f9 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #6 0x55f8c7cddb6f in testing::Test::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2728
-    #7 0x55f8c7ce193c in testing::TestInfo::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2874
-    #8 0x55f8c7ce61e7 in testing::TestSuite::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:3052
-    #9 0x55f8c7d31cfb in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:6004
-    #10 0x55f8c7dcfe5d in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #11 0x55f8c7da28d6 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #12 0x55f8c7d24169 in testing::UnitTest::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:5583
-    #13 0x55f8c7e30b82 in RUN_ALL_TESTS() /tmp/tmpj65tomt4/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x55f8c7e309cf in main /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f30da6b8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Direct leak of 80 byte(s) in 1 object(s) allocated from:
-    #0 0x7f30db31fd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x55f8c7c884c0 in PtrCStringVector::PtrCStringVector() /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13
-    #2 0x55f8c7c8ad7e in PtrCStringVector::operator+(PtrCStringVector const&) const /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:96
-    #3 0x55f8c7c5fbb5 in PtrCStringVectorTester_addOperator_expectReturningContainerContainingAllElementsFromAddedContainers_Test::TestBody() /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:281
-    #4 0x55f8c7dc9007 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #5 0x55f8c7d9c5f9 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #6 0x55f8c7cddb6f in testing::Test::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2728
-    #7 0x55f8c7ce193c in testing::TestInfo::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2874
-    #8 0x55f8c7ce61e7 in testing::TestSuite::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:3052
-    #9 0x55f8c7d31cfb in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:6004
-    #10 0x55f8c7dcfe5d in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #11 0x55f8c7da28d6 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #12 0x55f8c7d24169 in testing::UnitTest::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:5583
-    #13 0x55f8c7e30b82 in RUN_ALL_TESTS() /tmp/tmpj65tomt4/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x55f8c7e309cf in main /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f30da6b8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Direct leak of 80 byte(s) in 1 object(s) allocated from:
-    #0 0x7f30db31fd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x55f8c7c884c0 in PtrCStringVector::PtrCStringVector() /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13
-    #2 0x55f8c7c8859c in PtrCStringVector::PtrCStringVector(PtrCStringVector const&) /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:16
-    #3 0x55f8c7c62ecc in PtrCStringVectorTester_antytest3_Test::TestBody() /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:383
-    #4 0x55f8c7dc9007 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #5 0x55f8c7d9c5f9 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #6 0x55f8c7cddb6f in testing::Test::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2728
-    #7 0x55f8c7ce193c in testing::TestInfo::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2874
-    #8 0x55f8c7ce61e7 in testing::TestSuite::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:3052
-    #9 0x55f8c7d31cfb in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:6004
-    #10 0x55f8c7dcfe5d in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #11 0x55f8c7da28d6 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #12 0x55f8c7d24169 in testing::UnitTest::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:5583
-    #13 0x55f8c7e30b82 in RUN_ALL_TESTS() /tmp/tmpj65tomt4/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x55f8c7e309cf in main /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f30da6b8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Direct leak of 80 byte(s) in 1 object(s) allocated from:
-    #0 0x7f30db31fd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x55f8c7c884c0 in PtrCStringVector::PtrCStringVector() /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13
-    #2 0x55f8c7c8859c in PtrCStringVector::PtrCStringVector(PtrCStringVector const&) /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:16
-    #3 0x55f8c7c62d06 in foo_2 /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:372
-    #4 0x55f8c7c62f46 in PtrCStringVectorTester_antytest3_Test::TestBody() /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:383
-    #5 0x55f8c7dc9007 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #6 0x55f8c7d9c5f9 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #7 0x55f8c7cddb6f in testing::Test::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2728
-    #8 0x55f8c7ce193c in testing::TestInfo::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2874
-    #9 0x55f8c7ce61e7 in testing::TestSuite::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:3052
-    #10 0x55f8c7d31cfb in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:6004
-    #11 0x55f8c7dcfe5d in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #12 0x55f8c7da28d6 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #13 0x55f8c7d24169 in testing::UnitTest::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:5583
-    #14 0x55f8c7e30b82 in RUN_ALL_TESTS() /tmp/tmpj65tomt4/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #15 0x55f8c7e309cf in main /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest_main.cc:64
-    #16 0x7f30da6b8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Direct leak of 80 byte(s) in 1 object(s) allocated from:
-    #0 0x7f30db31fd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x55f8c7c884c0 in PtrCStringVector::PtrCStringVector() /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13
-    #2 0x55f8c7c8859c in PtrCStringVector::PtrCStringVector(PtrCStringVector const&) /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:16
-    #3 0x55f8c7c59d16 in PtrCStringVectorTester_copyConstructor_textsDeeplyCopied_Test::TestBody() /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:133
-    #4 0x55f8c7dc9007 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #5 0x55f8c7d9c5f9 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #6 0x55f8c7cddb6f in testing::Test::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2728
-    #7 0x55f8c7ce193c in testing::TestInfo::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2874
-    #8 0x55f8c7ce61e7 in testing::TestSuite::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:3052
-    #9 0x55f8c7d31cfb in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:6004
-    #10 0x55f8c7dcfe5d in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #11 0x55f8c7da28d6 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #12 0x55f8c7d24169 in testing::UnitTest::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:5583
-    #13 0x55f8c7e30b82 in RUN_ALL_TESTS() /tmp/tmpj65tomt4/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x55f8c7e309cf in main /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f30da6b8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Direct leak of 80 byte(s) in 1 object(s) allocated from:
-    #0 0x7f30db31fd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x55f8c7c884c0 in PtrCStringVector::PtrCStringVector() /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13
-    #2 0x55f8c7c8859c in PtrCStringVector::PtrCStringVector(PtrCStringVector const&) /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:16
-    #3 0x55f8c7c66a64 in PtrCStringVectorTester_antytest10_Test::TestBody() /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:489
-    #4 0x55f8c7dc9007 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #5 0x55f8c7d9c5f9 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #6 0x55f8c7cddb6f in testing::Test::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2728
-    #7 0x55f8c7ce193c in testing::TestInfo::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2874
-    #8 0x55f8c7ce61e7 in testing::TestSuite::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:3052
-    #9 0x55f8c7d31cfb in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:6004
-    #10 0x55f8c7dcfe5d in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #11 0x55f8c7da28d6 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #12 0x55f8c7d24169 in testing::UnitTest::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:5583
-    #13 0x55f8c7e30b82 in RUN_ALL_TESTS() /tmp/tmpj65tomt4/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x55f8c7e309cf in main /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f30da6b8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-Direct leak of 80 byte(s) in 1 object(s) allocated from:
-    #0 0x7f30db31fd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x55f8c7c884c0 in PtrCStringVector::PtrCStringVector() /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13
-    #2 0x55f8c7c8859c in PtrCStringVector::PtrCStringVector(PtrCStringVector const&) /tmp/tmpj65tomt4/student/PtrCStringVector.cpp:16
-    #3 0x55f8c7c59101 in PtrCStringVectorTester_copyConstructor_textsDeeplyCopied_Test::TestBody() /tmp/tmpj65tomt4/student/tests/PtrCStringVectorTests.cpp:123
-    #4 0x55f8c7dc9007 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #5 0x55f8c7d9c5f9 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #6 0x55f8c7cddb6f in testing::Test::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2728
-    #7 0x55f8c7ce193c in testing::TestInfo::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2874
-    #8 0x55f8c7ce61e7 in testing::TestSuite::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:3052
-    #9 0x55f8c7d31cfb in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:6004
-    #10 0x55f8c7dcfe5d in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2653
-    #11 0x55f8c7da28d6 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:2689
-    #12 0x55f8c7d24169 in testing::UnitTest::Run() /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest.cc:5583
-    #13 0x55f8c7e30b82 in RUN_ALL_TESTS() /tmp/tmpj65tomt4/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x55f8c7e309cf in main /tmp/tmpj65tomt4/student/tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f30da6b8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-
-SUMMARY: AddressSanitizer: 1120 byte(s) leaked in 14 allocation(s).
-
- Performance counter stats for '/tmp/tmpj65tomt4/student/build/bin/tests':
-
-     5,164,605,932      cycles                    #    2.841 GHz                      (66.86%)
-     9,959,237,919      instructions              #    1.93  insn per cycle           (83.50%)
-        15,427,740      cache-references          #    8.487 M/sec                    (83.44%)
-         7,023,264      cache-misses              #   45.524 % of all cache refs      (83.28%)
-     2,243,583,692      branches                  #    1.234 G/sec                    (83.28%)
-         7,383,379      branch-misses             #    0.33% of all branches          (83.29%)
-           181,179      faults                    #   99.668 K/sec                  
-          1,817.83 msec task-clock                #    1.000 CPUs utilized          
-                 8      context-switches          #    4.401 /sec                   
+     4,756,407,555      cycles                    #    2.663 GHz                      (66.63%)
+     9,204,279,421      instructions              #    1.94  insn per cycle           (83.20%)
+        14,476,199      cache-references          #    8.105 M/sec                    (83.20%)
+         7,366,768      cache-misses              #   50.889 % of all cache refs      (83.43%)
+     2,123,136,170      branches                  #    1.189 G/sec                    (83.43%)
+         2,186,915      branch-misses             #    0.10% of all branches          (83.32%)
+           174,361      faults                    #   97.623 K/sec                  
+          1,786.06 msec task-clock                #    1.000 CPUs utilized          
+                 5      context-switches          #    2.799 /sec                   
                  0      cpu-migrations            #    0.000 /sec                   
-           181,179      page-faults               #   99.668 K/sec                  
+           174,361      page-faults               #   97.623 K/sec                  
 
-       1.818197369 seconds time elapsed
+       1.786665500 seconds time elapsed
 
-       1.489895000 seconds user
-       0.328477000 seconds sys
+       1.401460000 seconds user
+       0.385453000 seconds sys
 
 
+======================
+Program perf to narzędzie do analizy wydajności działania programów.
+Podkomenda perf\ stat mierzy podstawowe statystyki wydajności: ile operacji wykonał CPU, jak dobrze działała pamięć cache itd.
+
+Tłumaczenie wyników perf stat:
+
+1. cycles         - liczba cykli CPU zużyta przez program. Jeden cykl to podstawowa jednostka pracy procesora: np. wykonanie małego fragmentu instrukcji.
+2. instructions   - liczba wykonanych instrukcji procesora. Instrukcja to pojedyncza operacja typu dodawanie, przesunięcie, skok itd.
+3. cache-references - liczba prób odczytu/zapisu danych z szybkiej pamięci cache procesora.
+4. cache-misses   - ile razy procesor próbował dostać dane z cache, ale ich tam nie było, przez co musiał pobrać z RAM-u.
+5. branches       - liczba instrukcji skoku, np. w if-ach, pętlach for/while lub switch.
+6. branch-misses  - liczba sytuacji, kiedy procesor źle przewidział wynik skoku i musiał cofnąć się i poprawić, co spowalnia program.
+7. faults         - liczba błędów dostępu do pamięci lub pułapek systemowych. Np. gdy program odwołuje się do pamięci, której jeszcze nie załadowano do RAM-u.
+8. task-clock     - łączny czas w milisekundach, jaki procesor aktywnie spędził wykonując program.
+9. context-switches - ile razy system operacyjny przełączył wykonanie z jednego procesu lub wątku na inny: przełączenie uwagi CPU.
+10. cpu-migrations - ile razy system przeniósł proces między różnymi rdzeniami CPU, co może spowalniać działanie.
+11. page-faults    - liczba sytuacji, kiedy program chciał użyć fragmentu pamięci, który nie był jeszcze załadowany do RAM i system musiał go dopiero wczytać.
+
+Dodatkowo:
+- time elapsed - całkowity rzeczywisty czas trwania programu: z perspektywy zegarka na ścianie.
+- user/sys     - czas spędzony na wykonywaniu kodu użytkownika [user] oraz kodu systemowego [sys].
+======================
+[100%] Built target perf_stats_tests

@@ -1,26 +1,26 @@
-make: Entering directory '/tmp/tmpj65tomt4/student/build'
-make[1]: Entering directory '/tmp/tmpj65tomt4/student/build'
-make[2]: Entering directory '/tmp/tmpj65tomt4/student/build'
-make[3]: Entering directory '/tmp/tmpj65tomt4/student/build'
-make[3]: Leaving directory '/tmp/tmpj65tomt4/student/build'
-make[3]: Entering directory '/tmp/tmpj65tomt4/student/build'
+make: Entering directory '/tmp/tmp7u11x9w4/student/build'
+make[1]: Entering directory '/tmp/tmp7u11x9w4/student/build'
+make[2]: Entering directory '/tmp/tmp7u11x9w4/student/build'
+make[3]: Entering directory '/tmp/tmp7u11x9w4/student/build'
+make[3]: Leaving directory '/tmp/tmp7u11x9w4/student/build'
+make[3]: Entering directory '/tmp/tmp7u11x9w4/student/build'
 [ 25%] Building CXX object CMakeFiles/zad10PtrCStringVector.dir/PtrCStringVector.cpp.o
 [ 50%] Building CXX object CMakeFiles/zad10PtrCStringVector.dir/main.cpp.o
 [ 75%] Linking CXX executable bin/zad10PtrCStringVector
-make[3]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make[3]: Leaving directory '/tmp/tmp7u11x9w4/student/build'
 [ 75%] Built target zad10PtrCStringVector
-make[3]: Entering directory '/tmp/tmpj65tomt4/student/build'
-make[3]: Leaving directory '/tmp/tmpj65tomt4/student/build'
-make[3]: Entering directory '/tmp/tmpj65tomt4/student/build'
+make[3]: Entering directory '/tmp/tmp7u11x9w4/student/build'
+make[3]: Leaving directory '/tmp/tmp7u11x9w4/student/build'
+make[3]: Entering directory '/tmp/tmp7u11x9w4/student/build'
 [100%] Running clang-tidy to perform static analysis on source files
-9 warnings and 1 error generated.
-Error while processing /tmp/tmpj65tomt4/student/PtrCStringVector.cpp.
-18 warnings and 2 errors generated.
-Error while processing /tmp/tmpj65tomt4/student/PtrCStringVector.cpp.
-18 warnings and 3 errors generated.
-Error while processing /tmp/tmpj65tomt4/student/main.cpp.
-18 warnings and 3 errors generated.
-Error while processing /tmp/tmpj65tomt4/student/PtrCStringVector.h.
+5 warnings and 1 error generated.
+Error while processing /tmp/tmp7u11x9w4/student/PtrCStringVector.cpp.
+10 warnings and 2 errors generated.
+Error while processing /tmp/tmp7u11x9w4/student/PtrCStringVector.cpp.
+10 warnings and 3 errors generated.
+Error while processing /tmp/tmp7u11x9w4/student/main.cpp.
+10 warnings and 3 errors generated.
+Error while processing /tmp/tmp7u11x9w4/student/PtrCStringVector.h.
 error: invalid value 'c++23' in '-std=c++23' [clang-diagnostic-error]
 note: use 'c++98' or 'c++03' for 'ISO C++ 1998 with amendments' standard
 note: use 'gnu++98' or 'gnu++03' for 'ISO C++ 1998 with amendments and GNU extensions' standard
@@ -34,87 +34,42 @@ note: use 'c++20' for 'ISO C++ 2020 DIS' standard
 note: use 'gnu++20' for 'ISO C++ 2020 DIS with GNU extensions' standard
 note: use 'c++2b' for 'Working draft for ISO C++ 2023 DIS' standard
 note: use 'gnu++2b' for 'Working draft for ISO C++ 2023 DIS with GNU extensions' standard
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:24:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:22:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
         std::strcpy(data_[i], srcPtrCStringVector.data_[i]);
         ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:24:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:22:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
         std::strcpy(data_[i], srcPtrCStringVector.data_[i]);
         ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:49:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
-        std::strcpy(data_[i], source.data_[i]);
-        ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:49:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
-        std::strcpy(data_[i], source.data_[i]);
-        ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:79:5: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:59:5: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
     strcpy(data_[size_], text2Add);
     ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:79:5: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:59:5: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
     strcpy(data_[size_], text2Add);
     ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:90:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
-        strcpy(new_data[i], data_[i]);
-        ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:90:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
-        strcpy(new_data[i], data_[i]);
-        ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:94:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
-        strcpy(new_data[size_+i], anotherVector[i]);
-        ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:94:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
-        strcpy(new_data[size_+i], anotherVector[i]);
-        ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:100:12: warning: Potential leak of memory pointed to by 'result.data_' [clang-analyzer-cplusplus.NewDeleteLeaks]
-    return result;
-           ^
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:88:24: note: Assuming 'i' is >= field 'size_'
-    for (size_t i = 0; i < size_; ++i) {
-                       ^~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:88:5: note: Loop condition is false. Execution continues on line 92
-    for (size_t i = 0; i < size_; ++i) {
-    ^
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:92:24: note: Assuming the condition is false
-    for (size_t i = 0; i < anotherVector.size(); ++i) {
-                       ^~~~~~~~~~~~~~~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:92:5: note: Loop condition is false. Execution continues on line 96
-    for (size_t i = 0; i < anotherVector.size(); ++i) {
-    ^
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:96:22: note: Calling default constructor for 'PtrCStringVector'
-    PtrCStringVector result;
-                     ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:13:13: note: Memory is allocated
-    data_ = new char*[capacity_];
-            ^~~~~~~~~~~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:96:22: note: Returning from default constructor for 'PtrCStringVector'
-    PtrCStringVector result;
-                     ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:100:12: note: Potential leak of memory pointed to by 'result.data_'
-    return result;
-           ^
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:127:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:101:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
         std::strcpy(combined, data_[i]);
         ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:127:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:101:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
         std::strcpy(combined, data_[i]);
         ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:128:9: warning: Call to function 'strcat' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcat'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:102:9: warning: Call to function 'strcat' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcat'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
         std::strcat(combined, rhs.data_[i]);
         ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:128:9: note: Call to function 'strcat' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcat'. CWE-119
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:102:9: note: Call to function 'strcat' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcat'. CWE-119
         std::strcat(combined, rhs.data_[i]);
         ^~~~~~~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:162:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
-        strcpy(newData[i], data_[i]);
-        ^~~~~~
-/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:162:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
-        strcpy(newData[i], data_[i]);
-        ^~~~~~
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:136:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy]
+        std::strcpy(newData[i], data_[i]);
+        ^~~~~~~~~~~
+/tmp/tmp7u11x9w4/student/PtrCStringVector.cpp:136:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+        std::strcpy(newData[i], data_[i]);
+        ^~~~~~~~~~~
 Found compiler error(s).
 make[3]: *** [CMakeFiles/clang_tidy.dir/build.make:71: CMakeFiles/clang_tidy] Error 1
-make[3]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make[3]: Leaving directory '/tmp/tmp7u11x9w4/student/build'
 make[2]: *** [CMakeFiles/Makefile2:401: CMakeFiles/clang_tidy.dir/all] Error 2
-make[2]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make[2]: Leaving directory '/tmp/tmp7u11x9w4/student/build'
 make[1]: *** [CMakeFiles/Makefile2:408: CMakeFiles/clang_tidy.dir/rule] Error 2
-make[1]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make[1]: Leaving directory '/tmp/tmp7u11x9w4/student/build'
 make: *** [Makefile:286: clang_tidy] Error 2
-make: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make: Leaving directory '/tmp/tmp7u11x9w4/student/build'
