@@ -1,47 +1,58 @@
-Running main() from /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest_main.cc
+Running main() from /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest_main.cc
 [==========] Running 20 tests from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 20 tests from PtrCStringVectorTester
 [ RUN      ] PtrCStringVectorTester.defaultConstructor_sizeOfEmptyContainerIsZero
 [       OK ] PtrCStringVectorTester.defaultConstructor_sizeOfEmptyContainerIsZero (0 ms)
 [ RUN      ] PtrCStringVectorTester.pushBack_sizeOfContainerIncreaseAfterCallingPushBack
+[       OK ] PtrCStringVectorTester.pushBack_sizeOfContainerIncreaseAfterCallingPushBack (0 ms)
+[ RUN      ] PtrCStringVectorTester.arrayIndexingOperator_testsInTheSamePositionsAsPushed
+[       OK ] PtrCStringVectorTester.arrayIndexingOperator_testsInTheSamePositionsAsPushed (0 ms)
+[ RUN      ] PtrCStringVectorTester.arrayIndexingOperator_throwingExceptionWhenOutOfRange
+[       OK ] PtrCStringVectorTester.arrayIndexingOperator_throwingExceptionWhenOutOfRange (0 ms)
+[ RUN      ] PtrCStringVectorTester.copyConstructor_textsDeeplyCopied
+[       OK ] PtrCStringVectorTester.copyConstructor_textsDeeplyCopied (0 ms)
+[ RUN      ] PtrCStringVectorTester.assignmentOperator_copyingContainerDeeply
+[       OK ] PtrCStringVectorTester.assignmentOperator_copyingContainerDeeply (0 ms)
+[ RUN      ] PtrCStringVectorTester.assignmentOperator_assignmentCascadeAtOnceExpectingDeepCopyMultipleTimesEvenWithItselve
 =================================================================
-==183==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs operator delete) on 0x604000000750
-    #0 0x7fb81edefc50 in operator delete(void*, unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164
-    #1 0x5591c7e5ce5f in PtrCStringVector::~PtrCStringVector() /tmp/tmpihi469fa/student/PtrCStringVector.cpp:31
-    #2 0x5591c7e2a54c in PtrCStringVectorTester_pushBack_sizeOfContainerIncreaseAfterCallingPushBack_Test::TestBody() /tmp/tmpihi469fa/student/tests/PtrCStringVectorTests.cpp:59
-    #3 0x5591c7f9cd43 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2653
-    #4 0x5591c7f70335 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2689
-    #5 0x5591c7eb18ab in testing::Test::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2728
-    #6 0x5591c7eb5678 in testing::TestInfo::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2874
-    #7 0x5591c7eb9f23 in testing::TestSuite::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:3052
-    #8 0x5591c7f05a37 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:6004
-    #9 0x5591c7fa3b99 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2653
-    #10 0x5591c7f76612 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2689
-    #11 0x5591c7ef7ea5 in testing::UnitTest::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:5583
-    #12 0x5591c80048be in RUN_ALL_TESTS() /tmp/tmpihi469fa/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #13 0x5591c800470b in main /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest_main.cc:64
-    #14 0x7fb81e187d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #15 0x7fb81e187e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #16 0x5591c7e29a04 in _start (/tmp/tmpihi469fa/student/build/bin/tests+0x27ca04) (BuildId: 6a05947cdc3d2ab2605ae9447ce3a0654f0b1c74)
+==183==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs operator delete) on 0x60e000000040
+    #0 0x7f32a17fac50 in operator delete(void*, unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164
+    #1 0x560459b53ebd in PtrCStringVector::free() /tmp/tmp4hamdk56/student/PtrCStringVector.cpp:149
+    #2 0x560459b513b6 in PtrCStringVector::operator=(PtrCStringVector const&) /tmp/tmp4hamdk56/student/PtrCStringVector.cpp:42
+    #3 0x560459b2465d in PtrCStringVectorTester_assignmentOperator_assignmentCascadeAtOnceExpectingDeepCopyMultipleTimesEvenWithItselve_Test::TestBody() /tmp/tmp4hamdk56/student/tests/PtrCStringVectorTests.cpp:199
+    #4 0x560459c90ea3 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2653
+    #5 0x560459c64495 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2689
+    #6 0x560459ba5a0b in testing::Test::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2728
+    #7 0x560459ba97d8 in testing::TestInfo::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2874
+    #8 0x560459bae083 in testing::TestSuite::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:3052
+    #9 0x560459bf9b97 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:6004
+    #10 0x560459c97cf9 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2653
+    #11 0x560459c6a772 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2689
+    #12 0x560459bec005 in testing::UnitTest::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:5583
+    #13 0x560459cf8a1e in RUN_ALL_TESTS() /tmp/tmp4hamdk56/student/tests/lib/googletest/include/gtest/gtest.h:2334
+    #14 0x560459cf886b in main /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest_main.cc:64
+    #15 0x7f32a0b92d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #16 0x7f32a0b92e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #17 0x560459b1da24 in _start (/tmp/tmp4hamdk56/student/build/bin/tests+0x27ca24) (BuildId: d9fe3afab6bfe19c61e682b07c02f289717b0549)
 
-0x604000000750 is located 0 bytes inside of 42-byte region [0x604000000750,0x60400000077a)
+0x60e000000040 is located 0 bytes inside of 153-byte region [0x60e000000040,0x60e0000000d9)
 allocated by thread T0 here:
-    #0 0x7fb81edeed28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
-    #1 0x5591c7e5e0eb in PtrCStringVector::push_back(char const*) /tmp/tmpihi469fa/student/PtrCStringVector.cpp:75
-    #2 0x5591c7e2a2a6 in PtrCStringVectorTester_pushBack_sizeOfContainerIncreaseAfterCallingPushBack_Test::TestBody() /tmp/tmpihi469fa/student/tests/PtrCStringVectorTests.cpp:56
-    #3 0x5591c7f9cd43 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2653
-    #4 0x5591c7f70335 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2689
-    #5 0x5591c7eb18ab in testing::Test::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2728
-    #6 0x5591c7eb5678 in testing::TestInfo::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2874
-    #7 0x5591c7eb9f23 in testing::TestSuite::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:3052
-    #8 0x5591c7f05a37 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:6004
-    #9 0x5591c7fa3b99 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2653
-    #10 0x5591c7f76612 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:2689
-    #11 0x5591c7ef7ea5 in testing::UnitTest::Run() /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest.cc:5583
-    #12 0x5591c80048be in RUN_ALL_TESTS() /tmp/tmpihi469fa/student/tests/lib/googletest/include/gtest/gtest.h:2334
-    #13 0x5591c800470b in main /tmp/tmpihi469fa/student/tests/lib/googletest/src/gtest_main.cc:64
-    #14 0x7fb81e187d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f32a17f9d28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
+    #1 0x560459b5222c in PtrCStringVector::push_back(char const*) /tmp/tmp4hamdk56/student/PtrCStringVector.cpp:78
+    #2 0x560459b24586 in PtrCStringVectorTester_assignmentOperator_assignmentCascadeAtOnceExpectingDeepCopyMultipleTimesEvenWithItselve_Test::TestBody() /tmp/tmp4hamdk56/student/tests/PtrCStringVectorTests.cpp:196
+    #3 0x560459c90ea3 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2653
+    #4 0x560459c64495 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2689
+    #5 0x560459ba5a0b in testing::Test::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2728
+    #6 0x560459ba97d8 in testing::TestInfo::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2874
+    #7 0x560459bae083 in testing::TestSuite::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:3052
+    #8 0x560459bf9b97 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:6004
+    #9 0x560459c97cf9 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2653
+    #10 0x560459c6a772 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:2689
+    #11 0x560459bec005 in testing::UnitTest::Run() /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest.cc:5583
+    #12 0x560459cf8a1e in RUN_ALL_TESTS() /tmp/tmp4hamdk56/student/tests/lib/googletest/include/gtest/gtest.h:2334
+    #13 0x560459cf886b in main /tmp/tmp4hamdk56/student/tests/lib/googletest/src/gtest_main.cc:64
+    #14 0x7f32a0b92d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: alloc-dealloc-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164 in operator delete(void*, unsigned long)
 ==183==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
