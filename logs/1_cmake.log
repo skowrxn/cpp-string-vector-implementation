@@ -16,24 +16,24 @@
 -- Looking for __ubsan_handle_add_overflow in ubsan - found
 -- Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne
 -- Znaleziono include-what-you-use: /usr/bin/include-what-you-use
--- Używany mapping IWYU: /tmp/tmp8jzuauif/student/tests/include-what-you-use_exceptions.imp
-Katalog do zbudowanego projektu: /tmp/tmp8jzuauif/student/build
- + Znaleziono nagłówki: /tmp/tmp8jzuauif/student/PtrCStringVector.h
- + Znaleziono źródła: /tmp/tmp8jzuauif/student/PtrCStringVector.cpp;/tmp/tmp8jzuauif/student/main.cpp
- + Znaleziono źródła bez main.cpp: /tmp/tmp8jzuauif/student/PtrCStringVector.cpp
+-- Używany mapping IWYU: /tmp/tmpclvwsgmh/student/tests/include-what-you-use_exceptions.imp
+Katalog do zbudowanego projektu: /tmp/tmpclvwsgmh/student/build
+ + Znaleziono nagłówki: /tmp/tmpclvwsgmh/student/PtrCStringVector.h
+ + Znaleziono źródła: /tmp/tmpclvwsgmh/student/PtrCStringVector.cpp;/tmp/tmpclvwsgmh/student/main.cpp
+ + Znaleziono źródła bez main.cpp: /tmp/tmpclvwsgmh/student/PtrCStringVector.cpp
 	* valgrind found: /usr/bin/valgrind
 	* cppcheck found: /usr/local/bin/cppcheck
-	+ adding command found: `cpplint` which would check trailing whitespaces and tabs in files: /tmp/tmp8jzuauif/student/PtrCStringVector.h and /tmp/tmp8jzuauif/student/PtrCStringVector.cpp;/tmp/tmp8jzuauif/student/main.cpp
-	+ adding command found: `clang-tidy` to run static analysis on source files: /tmp/tmp8jzuauif/student/PtrCStringVector.cpp;/tmp/tmp8jzuauif/student/main.cpp and /tmp/tmp8jzuauif/student/PtrCStringVector.h
-	+ adding command found: `flawfinder` to perform security analysis on files: /tmp/tmp8jzuauif/student/PtrCStringVector.cpp;/tmp/tmp8jzuauif/student/main.cpp and /tmp/tmp8jzuauif/student/PtrCStringVector.h
+	+ adding command found: `cpplint` which would check trailing whitespaces and tabs in files: /tmp/tmpclvwsgmh/student/PtrCStringVector.h and /tmp/tmpclvwsgmh/student/PtrCStringVector.cpp;/tmp/tmpclvwsgmh/student/main.cpp
+	+ adding command found: `clang-tidy` to run static analysis on source files: /tmp/tmpclvwsgmh/student/PtrCStringVector.cpp;/tmp/tmpclvwsgmh/student/main.cpp and /tmp/tmpclvwsgmh/student/PtrCStringVector.h
+	+ adding command found: `flawfinder` to perform security analysis on files: /tmp/tmpclvwsgmh/student/PtrCStringVector.cpp;/tmp/tmpclvwsgmh/student/main.cpp and /tmp/tmpclvwsgmh/student/PtrCStringVector.h
 -- Looking for pthread.h
 -- Looking for pthread.h - found
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
 -- Found Threads: TRUE  
- + Znaleziono pliki testów: /tmp/tmp8jzuauif/student/tests/PtrCStringVectorTests.cpp
+ + Znaleziono pliki testów: /tmp/tmpclvwsgmh/student/tests/PtrCStringVectorTests.cpp
  + katalog nagłówków: 
 	* perf found: /usr/bin/perf, so adding command: 'perf_stats_tests'
 -- Configuring done
 -- Generating done
--- Build files have been written to: /tmp/tmp8jzuauif/student/build
+-- Build files have been written to: /tmp/tmpclvwsgmh/student/build

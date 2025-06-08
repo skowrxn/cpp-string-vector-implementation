@@ -1,0 +1,48 @@
+Running main() from /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest_main.cc
+[==========] Running 20 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 20 tests from PtrCStringVectorTester
+[ RUN      ] PtrCStringVectorTester.defaultConstructor_sizeOfEmptyContainerIsZero
+[       OK ] PtrCStringVectorTester.defaultConstructor_sizeOfEmptyContainerIsZero (0 ms)
+[ RUN      ] PtrCStringVectorTester.pushBack_sizeOfContainerIncreaseAfterCallingPushBack
+=================================================================
+==183==ERROR: AddressSanitizer: alloc-dealloc-mismatch (operator new [] vs operator delete) on 0x604000000750
+    #0 0x7fe6d6cccc50 in operator delete(void*, unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164
+    #1 0x560417b7be5f in PtrCStringVector::~PtrCStringVector() /tmp/tmpclvwsgmh/student/PtrCStringVector.cpp:31
+    #2 0x560417b4954c in PtrCStringVectorTester_pushBack_sizeOfContainerIncreaseAfterCallingPushBack_Test::TestBody() /tmp/tmpclvwsgmh/student/tests/PtrCStringVectorTests.cpp:59
+    #3 0x560417cbbab1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2653
+    #4 0x560417c8f0a3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2689
+    #5 0x560417bd0619 in testing::Test::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2728
+    #6 0x560417bd43e6 in testing::TestInfo::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2874
+    #7 0x560417bd8c91 in testing::TestSuite::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:3052
+    #8 0x560417c247a5 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:6004
+    #9 0x560417cc2907 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2653
+    #10 0x560417c95380 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2689
+    #11 0x560417c16c13 in testing::UnitTest::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:5583
+    #12 0x560417d2362c in RUN_ALL_TESTS() /tmp/tmpclvwsgmh/student/tests/lib/googletest/include/gtest/gtest.h:2334
+    #13 0x560417d23479 in main /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest_main.cc:64
+    #14 0x7fe6d6064d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #15 0x7fe6d6064e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #16 0x560417b48a04 in _start (/tmp/tmpclvwsgmh/student/build/bin/tests+0x27ca04) (BuildId: 873eb59ba5a1fe646afe822e0761cff2d7cd3095)
+
+0x604000000750 is located 0 bytes inside of 42-byte region [0x604000000750,0x60400000077a)
+allocated by thread T0 here:
+    #0 0x7fe6d6ccbd28 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
+    #1 0x560417b7d0eb in PtrCStringVector::push_back(char const*) /tmp/tmpclvwsgmh/student/PtrCStringVector.cpp:75
+    #2 0x560417b492a6 in PtrCStringVectorTester_pushBack_sizeOfContainerIncreaseAfterCallingPushBack_Test::TestBody() /tmp/tmpclvwsgmh/student/tests/PtrCStringVectorTests.cpp:56
+    #3 0x560417cbbab1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2653
+    #4 0x560417c8f0a3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2689
+    #5 0x560417bd0619 in testing::Test::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2728
+    #6 0x560417bd43e6 in testing::TestInfo::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2874
+    #7 0x560417bd8c91 in testing::TestSuite::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:3052
+    #8 0x560417c247a5 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:6004
+    #9 0x560417cc2907 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2653
+    #10 0x560417c95380 in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:2689
+    #11 0x560417c16c13 in testing::UnitTest::Run() /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest.cc:5583
+    #12 0x560417d2362c in RUN_ALL_TESTS() /tmp/tmpclvwsgmh/student/tests/lib/googletest/include/gtest/gtest.h:2334
+    #13 0x560417d23479 in main /tmp/tmpclvwsgmh/student/tests/lib/googletest/src/gtest_main.cc:64
+    #14 0x7fe6d6064d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+
+SUMMARY: AddressSanitizer: alloc-dealloc-mismatch ../../../../src/libsanitizer/asan/asan_new_delete.cpp:164 in operator delete(void*, unsigned long)
+==183==HINT: if you don't care about these errors you may set ASAN_OPTIONS=alloc_dealloc_mismatch=0
+==183==ABORTING
