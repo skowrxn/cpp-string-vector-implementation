@@ -146,7 +146,7 @@ PtrCStringVector PtrCStringVector::operator&(const PtrCStringVector &rhs) const 
 void PtrCStringVector::free()
 {
     for (size_t i = 0; i < size_; ++i) {
-        delete data_[i];
+        delete[] data_[i];
     }
     delete[] data_;
     size_ = 0;
@@ -156,13 +156,13 @@ void PtrCStringVector::free()
 void PtrCStringVector::reserve(std::size_t new_capacity)
 {
     if (new_capacity <= capacity_)return;
-    capacity_ = new_capacity;
-    char** newData = new char*[capacity_];
+    char** newData = new char*[new_capacity];
     for (size_t i = 0; i < size_; ++i) {
         newData[i] = new char[strlen(data_[i])+1];
         strcpy(newData[i], data_[i]);
-        delete data_[i];
+        delete[] data_[i];
     }
     delete[] data_;
     data_ = newData;
+    capacity_ = new_capacity;
 }
