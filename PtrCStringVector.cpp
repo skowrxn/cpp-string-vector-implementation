@@ -8,21 +8,29 @@
 using namespace std;
 
 
-PtrCStringVector::PtrCStringVector()
+PtrCStringVector::PtrCStringVector() : size_(0), capacity_(1)
 {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
-
+    data_ = new char*[0];
 }
 
 PtrCStringVector::PtrCStringVector(const PtrCStringVector &srcPtrCStringVector): PtrCStringVector()
 {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
-
+    capacity_ = srcPtrCStringVector.capacity_;
+    size_ = srcPtrCStringVector.size_;
+    data_ = new char*[capacity_];
+    for (size_t i = 0; i < size_; ++i) {
+        size_t len = std::strlen(srcPtrCStringVector.data_[i]) + 1;
+        data_[i] = new char[len];
+        std::strcpy(data_[i], srcPtrCStringVector.data_[i]);
+    }
 }
 
 PtrCStringVector::~PtrCStringVector()
 {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
+    for (size_t i = 0; i < size_; i++) {
+        delete data_[i];
+    }
+    delete data_;
 
 }
 
