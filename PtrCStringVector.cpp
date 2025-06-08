@@ -84,9 +84,11 @@ PtrCStringVector PtrCStringVector::operator+(const PtrCStringVector &anotherVect
     size_t new_capacity = capacity_ + anotherVector.capacity_;
     char** new_data = new char*[new_capacity];
     for (size_t i = 0; i < size_; ++i) {
+        new_data[i] = new char[strlen(data_[i])+1];
         strcpy(new_data[i], data_[i]);
     }
     for (size_t i = 0; i < anotherVector.size(); ++i) {
+        new_data[size_+i] = new char[strlen(anotherVector[i])+1];
         strcpy(new_data[size_+i], anotherVector[i]);
     }
     PtrCStringVector result;
