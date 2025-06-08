@@ -1,0 +1,3 @@
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:37:37: warning: 'operator=' should check for assignment to self to avoid problems with dynamic memory. [operatorEqToSelf]
+PtrCStringVector &PtrCStringVector::operator=(const PtrCStringVector &source)
+                                    ^

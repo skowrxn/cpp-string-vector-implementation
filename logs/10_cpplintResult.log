@@ -1,0 +1,71 @@
+make: Entering directory '/tmp/tmpj65tomt4/student/build'
+make[1]: Entering directory '/tmp/tmpj65tomt4/student/build'
+make[2]: Entering directory '/tmp/tmpj65tomt4/student/build'
+make[3]: Entering directory '/tmp/tmpj65tomt4/student/build'
+make[3]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make[3]: Entering directory '/tmp/tmpj65tomt4/student/build'
+[100%] Running cpplint to check for tabs and trailing whitespace
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:6:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:12:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:16:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:17:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:29:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:34:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:38:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:39:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:41:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:51:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:56:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:67:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:71:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:83:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:84:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:104:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:111:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:119:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:147:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.cpp:157:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:4:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:29:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:30:  public: should be indented +1 space inside class PtrCStringVector  [whitespace/indent] [3]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:31:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:38:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:74:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:81:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:123:  protected: should be indented +1 space inside class PtrCStringVector  [whitespace/indent] [3]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:123:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:124:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:132:  private: should be indented +1 space inside class PtrCStringVector  [whitespace/indent] [3]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:132:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmpj65tomt4/student/PtrCStringVector.h:138:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmpj65tomt4/student/main.cpp:10:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:10:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmpj65tomt4/student/main.cpp:16:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/main.cpp:20:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:25:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/main.cpp:30:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/main.cpp:31:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:31:  Missing spaces around <=  [whitespace/operators] [3]
+/tmp/tmpj65tomt4/student/main.cpp:35:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/main.cpp:39:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:40:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/main.cpp:48:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmpj65tomt4/student/main.cpp:49:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:50:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:52:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:53:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:55:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:56:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmpj65tomt4/student/main.cpp:57:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing /tmp/tmpj65tomt4/student/PtrCStringVector.cpp
+Done processing /tmp/tmpj65tomt4/student/PtrCStringVector.h
+Done processing /tmp/tmpj65tomt4/student/main.cpp
+Total errors found: 52
+make[3]: *** [CMakeFiles/cpplint.dir/build.make:71: CMakeFiles/cpplint] Error 1
+make[3]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make[2]: *** [CMakeFiles/Makefile2:375: CMakeFiles/cpplint.dir/all] Error 2
+make[2]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make[1]: *** [CMakeFiles/Makefile2:382: CMakeFiles/cpplint.dir/rule] Error 2
+make[1]: Leaving directory '/tmp/tmpj65tomt4/student/build'
+make: *** [Makefile:273: cpplint] Error 2
+make: Leaving directory '/tmp/tmpj65tomt4/student/build'
